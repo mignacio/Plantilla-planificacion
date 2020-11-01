@@ -1,28 +1,28 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Adquisidor y display en tiempo real de datos de motores de combustión interna} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
-%\posgrado{Carrera de Especialización en Sistemas Embebidos} 
-\posgrado{Carrera de Especialización en Internet de las Cosas} 
+\posgrado{Carrera de Especialización en Sistemas Embebidos} 
+%\posgrado{Carrera de Especialización en Internet de las Cosas} 
 %\posgrado{Carrera de Especialización en Intelegencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Nombre del Autor} 
+\autor{Ignacio Moya} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
+\director{Director}
 \pertenenciaDirector{pertenencia} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Gastón Cabello}
+\empresaCliente{Emprendimiento Personal}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -32,10 +32,9 @@
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{25 de agosto de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlanificacion{13 de octubre de 2020} 	%Fecha de final de cursada de GdP
+\fechaINICIO{23 de octubre de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlanificacion{11 de diciembre de 2020} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{22 de agosto de 2021}		%Fecha de defensa pública del trabajo final
-
 
 \begin{document}
 
@@ -62,8 +61,8 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-1.0      & Creación del documento                                          & 27/06/2020 \\ \hline
-1.1      & Avances en alguna cosa                                          & dd/mm/aaaa \\ \hline
+1.0      & Creación del documento                                          & 23/10/2020 \\ \hline
+1.1      & Avances en planificación del proyecto                           & 06/10/2020 \\ \hline
 1.2      & Otro ejemplo \newline
 		   Con texto partido \newline
 		   En varias líneas \newline
@@ -84,7 +83,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de temperatura de un calefón, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de adquisición y display de datos de un motor de combustión interna que será puesto a prueba sobre un motor de un vehículo Volskwagen Tipo 2 fabricada en 1985, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -101,11 +100,23 @@ Se adjunta a esta acta la planificación inicial.
 \end{tabular}
 \end{table}
 
-
-
-
 \section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
+
+El sistema a desarrollar puede dividirse en dos partes, la parte adquisidora de datos que consistirá de un circuito controlado por microprocesador montada cerca del motor del vehículo, la misma tendrá la tarea de digitalizar las señales producidas por diversos sensores ubicados estratégicamente sobre el mismo para capturar las variables relacionadas con el funcionamiento del motor. Luego la información capturada será transmitida a la segunda parte del sistema, la interfaz gráfica de usuario. La interfaz de usuario consistirá de un dispositivo más complejo, tendrá una pantalla para mostrar la información recibida y entradas para que el usuario pueda tomar decisiones sobre la información que se muestra en pantalla, también tendrá una tarjeta SD o un dispositivo de memoria similar para poder descargar la información capturada. En la Figura \ref{fig:diagrama_de_bloques} el sistema está representado como diagrama en bloques con más detalle en los tipos de sensores a utilizar y la posible ubicación de las partes del sistema.
+
+\vspace{25px}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.9\textwidth]{./Figuras/diagrama_proyecto.png}
+\caption{Diagrama en bloques del sistema}
+\label{fig:diagrama_de_bloques}
+\end{figure}
+
+\vspace{25px}
+
+Lo que se quiere lograr con este sistema, es que el usuario pueda ver en tiempo real en que condiciones se encuentra funcionando el motor. Con esta información disponible se le otorga al usuario la capacidad de diagnosticar fallas lo antes posible, teniendo en cuenta que el mal funcionamiento de un motor por tiempo prolongado puede causar daños y con la dificultad de conseguir repuestos para vehículos antiguos,
 
 \begin{consigna}{red}
 El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
@@ -172,7 +183,7 @@ Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hli
 Equipo        & miembro1 \newline 
 				miembro2          &              	&        	\\ \hline
 Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Usuario final &                   &              	& Propietarios de Vehículos Antiguos, \newline Mecánicos \newline e Instituciones Educativas \\ \hline
 \end{tabularx}
 \end{table}
 
