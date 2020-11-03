@@ -183,18 +183,19 @@ El propósito de este proyecto es el de desarrollar y construir un prototipo del
 
 El alcance de este proyecto incluye el:
 \begin{itemize}
-\item La elección de componentes electrónicos
-\item El diseño del circuito para amplificar las señales de los sensores
-\item El diseño del circuito impreso
-\item El desarrollo del firmware de la parte adquisidora
-\item El desarrollo del software de la interfaz gráfica de Usuario
-\item La confección de un primer prototipo
-\item Los ensayos de verificación y validación con el prototipo
+\item La elección de componentes electrónicos.
+\item El diseño del circuito para amplificar las señales de los sensores.
+\item El diseño del circuito impreso.
+\item El desarrollo del firmware de la parte adquisidora.
+\item El desarrollo del software de la interfaz gráfica de Usuario.
+\item La confección de un primer prototipo.
+\item Los ensayos de verificación y validación con el prototipo.
 \end{itemize}
 
 El proyecto no incluye:
 \begin{itemize}
 \item La elección o desarrollo de un gabinete para la parte adquisidora.
+\item El desarrollo de los componentes de montaje del sistema adquisidor.
 \item El montaje de la tablet en la cabina del vehículo.
 \item La elección de sensores a utilizar.
 \item Desarrollo del embalaje y documentación acompañante (e.g.: manual de usuario, prospecto).
@@ -216,20 +217,28 @@ Para el desarrollo del presente proyecto se supone que:
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{enumerate}
-\item Grupo de requerimientos asociados con la interfaz gráfica
-	\begin{enumerate}
-	\item REQ-GUI-001: La interfaz gráfica deberá poder mostrar gráficas con la información de todos los sensores a la vez.
-	\item REQ-GUI-002: El usuario tiene que poder elegir que sensores ver al mismo tiempo y cuáles no desea ver.
-	\item REQ-GUI-003: El usuario tiene que poder elegir
-	\end{enumerate}
-\item Grupo de requerimientos asociados con la parte adquisidora
-	\begin{enumerate}
-	\item Los rangos de los sensores de temperatura tiene que estar entre 0C y 200C. Con una resolución menor o igual a 0,25C
-	\item El rango de presión de aceite tiene que ser entre 1 y 100 PSI. Con una resolución menor o igual a 0,25C PSI
+\begin{itemize}
+\item Requerimientos generales del proyecto:
+	\begin{itemize}
+	\item \textbf{REQ-GEN-001:} Todo el código fuente del proyecto será almacenado bajo un sistema de control de versiones GIT.
+	\item \textbf{REQ-GEN-002:} La documentación del código fuente será llevada a cabo en comentarios del mismo, siguiendo el formato de Doxygen.
+	\end{itemize}
+\item Grupo de la interfaz gráfica de usuario:
+	\begin{itemize}
+	\item \textbf{REQ-GUI-001:} La interfaz gráfica deberá poder mostrar gráficas con la información de todos los sensores a la vez.
+	\item \textbf{REQ-GUI-002:} El usuario tiene que poder elegir que sensores ver al mismo tiempo y cuáles no desea ver.
+	\item \textbf{REQ-GUI-003:} El usuario tiene que poder definir alarmas por valor máximo, para cada uno de las variables.
 
-	\end{enumerate}
-\end{enumerate}
+	\end{itemize}
+\item Grupo del hardware adquisidor de datos:
+	\begin{itemize}
+	\item \textbf{REQ-ADQ-001:} El sistema tiene que adquirir la temperatura de los gases de admisión y escape, con un rango de temperatura entre 0C y 400C y una resolución menor igual a 0,5C. Con una tasa de muestreo mayor igual a 1 vez por segundo.
+	\item \textbf{REQ-ADQ-002:} El sistema tien que adquirir la temperatura del aceite del motor, con un rango de temperatura ente 0C y 400C y una resolución menor igual a 0,5C. Con una tasa de muestreo mayor igual a 1 vez por segundo.
+	\item \textbf{REQ-ADQ-003:} El sistema tiene que adquirir la velocidad de giro del motor, en un rango entre 0 y 20.000 revoluciones por minuto, con una resolución menor igual a 500 r.p.m. Con una tasa de muestreo mayor igual a 5 veces por segundo.
+	\item REQ-ADQ-004: El sistema tiene que adquirir la proporción de oxígeno en los gases de escape llamada lambda, con un rango de 0 a 2 y una resolución menor igual a 0,1 lambda.
+	\item REQ-ADQ-005: El sistema debe transmitir a la interfaz gráfica la información obtenida de los sensores
+	\end{itemize}
+\end{itemize}
 
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
@@ -242,51 +251,57 @@ Descripción: En esta sección se deben incluir las historias de usuarios y su p
 \label{sec:entregables}
 
 \begin{itemize}
-\item Código fuente del firmware
-\item Código fuente del software de interfaz gráfica
-\item Documentación del software
-\item Esquemático del circuito
-\item Proyecto del circuito impreso
-\item Circuito impreso con componentes soldados en funcionamiento
-\item Diagrama de instalación
-\item Informe final
-
+\item Código fuente del firmware.
+\item Código fuente del software de interfaz gráfica.
+\item Documentación del firmware y software.
+\item Esquemático del circuito.
+\item Proyecto del circuito impreso.
+\item Circuito impreso con componentes soldados en funcionamiento.
+\item Diagrama de instalación.
+\item Memoria final.
 \end{itemize}
 
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-Se recomienda mostrar el WBS mediante una lista indexada:
-
 \begin{enumerate}
-\item Grupo de tareas 1
+\item \textbf{Planificación.} (60 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Plan de trabajo. (20 hs)
+	\item Espeficicación de requerimientos de sistema. (20 hs)
+	\item Definición de pruebas de verificación y validación. (20 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item \textbf{Diseño y construcción del hardware del equipo.} (65 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Selección de componentes electrónicos. (10 hs)
+	\item Diseño del esquemático del circuito. (20 hs)
+	\item Diseño del circuito impreso. (20 hs)
+	\item Diseño del esquema de interconexión entre las partes. (5 hs)
+	\item Montaje del prototipo. (10 hs)
 	\end{enumerate}
-	\item Grupo de tareas 3
+\item \textbf{Diseño de la interfaz gráfica.} (
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
+	\item Diseño de la arquitectura de software. (tantas hs)
+	\item Maquetación de la interfaz gráfica. (tantas hs)
+	\item Desarrollo del software. (tantas hs)
+	\item Pruebas de verificación. (tantas hs)
+	\item Modificaciones del software. (tantas hs)
+	\item Segunda ronda de pruebas de verificación. (tantas hs).
 	\end{enumerate}
+\item \textbf{Diseño e implementación del firmware} (tantas hs).
+	\begin{itemize}
+	\item Diseño de la arquitectura de software.
+	\item Familiarización con el entorno de desarrollo.
+	\item Diseño del módulo adquisidor de temperatura.
+	\item Diseño del módulo adquisidor de presión de aceite.
+	\item Diseño del módul adquisidor de relación de oxígeno.
+	\item Diseño del módulo de transmisión de datos.
+	\
+	\end{itemize}
 \end{enumerate}
 
 Cantidad total de horas: (tantas hs)
 
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
-
-\end{consigna}
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
