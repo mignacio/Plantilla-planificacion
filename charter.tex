@@ -322,7 +322,7 @@ Cantidad total de horas: (600 hs)
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-En la figura \ref{fig:AoN} se detalla el desglose de tareas del proyecto como un diagrama "Activity on node", cada bloque representa una tarea y su color de fondo indica a que fase general del proyecto pertenece, la figura \ref{fig:leyenda-aon} describe este código de colores utilizado. El tiempo de las tareas está expresado en horas, se identifica un único camino crítico de duración de 340hs, el camino está sobresaltado con flechas de mayor grosor.
+En la figura \ref{fig:AoN} se detalla el desglose de tareas del proyecto como un diagrama "Activity on node", cada bloque representa una tarea y su color de fondo indica a que fase general del proyecto pertenece, la figura \ref{fig:leyenda-aon} describe este código de colores utilizado. El tiempo de las tareas está expresado en horas, se identifica un único camino crítico de duración de 360hs, el camino está sobresaltado con flechas de mayor grosor.
 
 \begin{figure}[htpb]
 \centering 
@@ -512,24 +512,49 @@ Establecer la matriz de asignación de responsabilidades y el manejo de la autor
 \rowcolor[HTML]{C0C0C0} 
 \cellcolor[HTML]{C0C0C0} &
   \cellcolor[HTML]{C0C0C0} &
-  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
+  \multicolumn{3}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
 \rowcolor[HTML]{C0C0C0} 
 \cellcolor[HTML]{C0C0C0} &
   \cellcolor[HTML]{C0C0C0} &
   Responsable &
   Orientador &
-  Equipo &
-  Cliente \\ \cline{3-6} 
+  Cliente &\\ \cline{3-6} 
 \rowcolor[HTML]{C0C0C0} 
 \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
   \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
   \authorname &
   \supname &
-  Nombre de alguien &
-  \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+  \clientename\\ \hline
+ %Responsable Orientador Equipo Cliente
+ 1.1 & Plan de trabajo											 & P  & C   & A  \\ \hline
+ 1.2 & Especificación de requisitos del sistema				 & P  & C   & A  \\ \hline
+ 1.3 & Definición de pruebas de verificación y validación		 & P  & C   & A  \\ \hline
+ 2.1 & Selección de componentes electrónicos					 & P  & C/A &  \\ \hline
+ 2.2 & Diseño del esquemático del circuito						 & P  & C/A &  \\ \hline
+ 2.3 & Diseño del circuito impreso								 & P  & C/A &  \\ \hline
+ 2.4 & Diseño del esquema de interconexión entre las partes	 & P  & C/A &  \\ \hline
+ 2.5 & Montaje del prototipo									 & P  & C/A &  \\ \hline
+ 3.1 & Diseño de la arquitectura de software					 & P  & C/A &  \\ \hline
+ 3.2 & Maquetación de la interfaz gráfica   					 & P  & C   & A  \\ \hline
+ 3.3 & Desarrollo de software									 & P  & C/A &  \\ \hline
+ 3.4 & Pruebas de verificación									 & P  & C/A & I  \\ \hline
+ 3.5 & Modificaciones de software								 & P  & C/A &  \\ \hline
+ 3.6 & Segunda ronda de pruebas de verificación				 & P  & C/A & I  \\ \hline
+ 4.1 & Diseño de la arquitectura de software					 & P  & C/A &  \\ \hline
+ 4.2 & Instalación del entorno de desarrollo					 & P  & C/A &  \\ \hline
+ 4.3 & Diseño del módulo adquisidor de temperaturas			 & P  & C/A &  \\ \hline
+ 4.4 & Diseño del módulo de presión de aceite					 & P  & C/A &  \\ \hline
+ 4.5 & Diseño del módulo adquisidor de relación de oxígeno		 & P  & C/A &  \\ \hline
+ 4.6 & Diseño del módulo de comunicación						 & P  & C/A &  \\ \hline
+ 4.7 & Pruebas de verificación									 & P  & C/A & I  \\ \hline
+ 4.8 & Modificaciones de software								 & P  & C/A &  \\ \hline
+ 4.9 & Segunda ronda de pruebas de verificación				 & P  & C/A & I  \\ \hline
+ 5.1 & Pruebas de validación del sistema			             & P  & C & A \\ \hline
+ 5.2 & Ajustes luego de las pruebas de validación				 & P  & C & A \\ \hline
+ 6.1 & Informes de avance  										 & P  & A & I  \\ \hline
+ 6.2 & Redacción de la memoria final				 			 & P  & A & I \\ \hline
+ 6.3 & Correcciones a la memoria final 							 & P  & A & I  \\ \hline
+ 6.4 & Presentación final  										 & P  & A & I  \\ \hline
 \end{tabular}%
 }
 \end{table}
