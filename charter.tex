@@ -64,6 +64,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.0      & Creación del documento                                          & 23/10/2020 \\ \hline
 1.1      & Avances en planificación del proyecto                           & 06/10/2020 \\ \hline
 1.2      & Se agregaron las historias de usuario							 & 15/11/2020 \\ \hline
+1.3      & Se completaron los puntos del 7 al 11							 & 23/11/2020 \\ \hline
 %		   Con texto partido \newline
 %		   En varias líneas \newline
 %		   A propósito                                                     & dd/mm/aaaa \\ \hline
@@ -278,7 +279,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\item Selección de componentes electrónicos. (10 hs)
 	\item Diseño del esquemático del circuito. (20 hs)
 	\item Diseño del circuito impreso. (20 hs)
-	\item Diseño del esquema de interconexión entre las partes. (5 hs)
+	\item Diseño del esquema de interconexión. (5 hs)
 	\item Montaje del prototipo. (10 hs)
 	\end{enumerate}
 \item \textbf{Diseño de la interfaz gráfica.} (165 hs)
@@ -293,7 +294,7 @@ Para el desarrollo del presente proyecto se supone que:
 \item \textbf{Diseño e implementación del firmware} (170 hs).
 	\begin{enumerate}
 	\item Diseño de la arquitectura de software. (20 hs)
-	\item Instalación y familiarización con el entorno de desarrollo. (15 hs)
+	\item Configuración con el entorno de desarrollo. (15 hs)
 	\item Diseño del módulo adquisidor de temperaturas. (10hs)
 	\item Diseño del módulo adquisidor de presión de aceite. (10 hs)
 	\item Diseño del módulo adquisidor de relación de oxígeno. (10 hs)
@@ -304,15 +305,15 @@ Para el desarrollo del presente proyecto se supone que:
 	\end{enumerate}
 \item \textbf{Etapa de validación.} (50 hs)
 	\begin{enumerate}
-	\item Pruebas de validación con el prototipo montado sobre el vehículo. (30hs)
+	\item Pruebas de validación con el prototipo. (30hs)
 	\item Ajustes luego de las pruebas de validación. (20hs)
 	\end{enumerate}
 \item \textbf{Cierre del proyecto.} (90 hs)
 	\begin{enumerate}
-	\item Informes de avance del proyecto (20hs)
-	\item Redacción de la memoria final del proyecto (40hs)
-	\item Correcciones a la memoria final del proyecto (20hs)
-	\item Presentación final del proyecto (10hs).
+	\item Informes de avance (20hs)
+	\item Redacción de la memoria final (40hs)
+	\item Correcciones a la memoria final (20hs)
+	\item Presentación final (10hs).
 	\end{enumerate}
 \end{enumerate}
 
@@ -342,47 +343,24 @@ En la figura \ref{fig:AoN} se detalla el desglose de tareas del proyecto como un
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
+La figura \ref{fig:diagrama-gantt} es el diagrama de gantt para el proyecto y la figura \ref{fig:tabla-gantt} es una tabla con el detalle de todas las tareas de inicio con fecha de inicio, fecha de fin y duración de horas. De este diagrama se puede extraer que la fecha estimada de fin del proyecto es el 16 de Septiembre del 2021.
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1.05\textwidth]{./Figuras/diagrama-gantt.pdf}
+\caption{Diagrama en \textit{Diagrama de gantt}}
+\label{fig:diagrama-gantt}
 \end{figure}
 
-\end{consigna}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.9\textwidth]{./Figuras/tabla-gantt.pdf}
+\caption{Diagrama en \textit{Tabla de tareas con duración en horas y fecha de inicio}}
+\label{fig:tabla-gantt}
+\end{figure}
+
+
+
 
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
@@ -391,56 +369,45 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realiza
 \begin{table}
 \label{tab:recursos}
 \centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
+\begin{tabularx}{\linewidth}{@{}|c|X|c|c|c|c|@{}}
 \hline
 \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-
-\end{tabularx}%
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC & Soldador & Multímetro & Osciloscopio \\ \hline
+ 1.1 & Plan de Trabajo 											 & 20 &  &  &  \\ \hline
+ 1.2 & Especificación de requerimientos de software			 & 20 &  &  &  \\ \hline
+ 1.3 & Definición de pruebas de verificación y validación		 & 20 &  &  &  \\ \hline
+ 2.1 & Selección de componentes electrónicos					 & 10 &  &  &  \\ \hline
+ 2.2 & Diseño del esquemático del circuito						 & 20 &  &  &  \\ \hline
+ 2.3 & Diseño del circuito impreso								 & 20 &  &  &  \\ \hline
+ 2.4 & Diseño del esquema de interconexión						 & 5  &  &  &  \\ \hline
+ 2.5 & Montaje del prototipo										 &    & 8 & 1 & 1 \\ \hline 
+ 3.1 & Diseño de la arquitectura de software					 & 30 &  &  &  \\ \hline
+ 3.2 & Maquetación de la interfaz gráfica						 & 30 &  &  &  \\ \hline
+ 3.3 & Desarrollo del software									 & 30 &  &  &  \\ \hline
+ 3.4 & Pruebas de verificación									 & 30 &  &  &  \\ \hline
+ 3.5 & Modificaciones del software								 & 15 &  &  &  \\ \hline
+ 3.6 & Segunda ronda de pruebas de verificación				 & 30 &  &  &  \\ \hline
+ 4.1 & Diseño de la arquitectura de software					 & 20  &  &  &  \\ \hline
+ 4.2 & Configuración del entorno de desarrollo					 & 15  &  &  &  \\ \hline
+ 4.3 & Diseño del módulo adquisidor de temperaturas			 & 10 &  &  &  \\ \hline
+ 4.4 & Diseño del módulo adquisidor de presión de aceite		 & 10 &  &  &  \\ \hline
+ 4.5 & Diseño del módulo adquisidor de relación de oxígeno	 & 10 &  &  &  \\ \hline
+ 4.6 & Diseño del módulo de transmisión de datos				 & 30 &  &  &  \\ \hline
+ 4.7 & Pruebas de verificación									 & 20 &  & 5 & 5 \\ \hline
+ 4.8 & Modificaciones del software								 & 15 &  &  &  \\ \hline
+ 4.9 & Segunda ronda de pruebas de verificación				 & 30 &  &  &  \\ \hline
+ 5.1 & Pruebas de validación con el prototipo 					 & 20 & 2 & 4 & 4 \\ \hline 
+ 5.2 & Ajustes luego de las pruebas de verificación			 & 10  & 2 & 4 & 4 \\ \hline
+ 6.1 & Informes de avance											 & 20 &  &  &  \\ \hline
+ 6.2 & Redacción de la memoria final							 & 40 &  &  &  \\ \hline
+ 6.3 & Correcciones a la memoria final							 & 20 &  &  &  \\ \hline
+ 6.4 & Presentación final											 & 10 &  &  &  \\ \hline
+\end{tabularx}
 \end{table}
-
 
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
-
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -453,24 +420,28 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+ Mano de obra &
+  \multicolumn{1}{c|}{600} &
+  \multicolumn{1}{c|}{750} &
+  \multicolumn{1}{c|}{450.000} \\ \hline
+ EDU-CIAA&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{6.000} &
+  \multicolumn{1}{c|}{6.000} \\ \hline
+ Componentes electrónicos&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{10.000} &
+  \multicolumn{1}{c|}{10.000} \\ \hline
+ Fabricación PCB&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{12.000} &
+  \multicolumn{1}{c|}{12.000} \\ \hline
+ Consumibles&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{3.000} &
+  \multicolumn{1}{c|}{3.000} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{481.000} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -478,22 +449,16 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
+30\% de los costos directos  &
+	\multicolumn{1}{c|}{1} &
+	\multicolumn{1}{c|}{144.300} &
+	\multicolumn{1}{c|}{144.300}
    \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{144.300} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{1}{c|}{625.300}
    \\ \hline
 \end{tabularx}%
 \end{table}
@@ -501,24 +466,22 @@ Descripción &
 
 \section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
-
 \begin{table}[htpb]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|c|c|c|c|c|}
+%\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{@{}|c|c|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 \cellcolor[HTML]{C0C0C0} &
   \cellcolor[HTML]{C0C0C0} &
-  \multicolumn{3}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
+  \multicolumn{3}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-5} 
 \rowcolor[HTML]{C0C0C0} 
 \cellcolor[HTML]{C0C0C0} &
   \cellcolor[HTML]{C0C0C0} &
   Responsable &
   Orientador &
-  Cliente &\\ \cline{3-6} 
+  Cliente \\ \cline{3-5} 
 \rowcolor[HTML]{C0C0C0} 
 \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
   \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
@@ -532,8 +495,8 @@ Establecer la matriz de asignación de responsabilidades y el manejo de la autor
  2.1 & Selección de componentes electrónicos					 & P  & C/A &  \\ \hline
  2.2 & Diseño del esquemático del circuito						 & P  & C/A &  \\ \hline
  2.3 & Diseño del circuito impreso								 & P  & C/A &  \\ \hline
- 2.4 & Diseño del esquema de interconexión entre las partes	 & P  & C/A &  \\ \hline
- 2.5 & Montaje del prototipo									 & P  & C/A &  \\ \hline
+ 2.4 & Diseño del esquema de interconexión						 & P  & C/A &  \\ \hline
+ 2.5 & Montaje del prototipo									 	 & P  & C/A &  \\ \hline
  3.1 & Diseño de la arquitectura de software					 & P  & C/A &  \\ \hline
  3.2 & Maquetación de la interfaz gráfica   					 & P  & C   & A  \\ \hline
  3.3 & Desarrollo de software									 & P  & C/A &  \\ \hline
@@ -541,7 +504,7 @@ Establecer la matriz de asignación de responsabilidades y el manejo de la autor
  3.5 & Modificaciones de software								 & P  & C/A &  \\ \hline
  3.6 & Segunda ronda de pruebas de verificación				 & P  & C/A & I  \\ \hline
  4.1 & Diseño de la arquitectura de software					 & P  & C/A &  \\ \hline
- 4.2 & Instalación del entorno de desarrollo					 & P  & C/A &  \\ \hline
+ 4.2 & Configuración del entorno de desarrollo					 & P  & C/A &  \\ \hline
  4.3 & Diseño del módulo adquisidor de temperaturas			 & P  & C/A &  \\ \hline
  4.4 & Diseño del módulo de presión de aceite					 & P  & C/A &  \\ \hline
  4.5 & Diseño del módulo adquisidor de relación de oxígeno		 & P  & C/A &  \\ \hline
@@ -558,24 +521,6 @@ Establecer la matriz de asignación de responsabilidades y el manejo de la autor
 \end{tabular}%
 }
 \end{table}
-
-{\footnotesize
-Referencias:
-\begin{itemize}
-	\item P = Responsabilidad Primaria
-	\item S = Responsabilidad Secundaria
-	\item A = Aprobación
-	\item I = Informado
-	\item C = Consultado
-\end{itemize}
-} %footnotesize
-
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
-
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
-
-\end{consigna}
 
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
